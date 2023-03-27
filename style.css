@@ -1,0 +1,105 @@
+* {
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:active {
+  color: yellow;
+}
+
+.header {
+  position: sticky; 
+  top: 0;
+  left: 0;
+  background-color: rgb(82, 220, 220);
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  height: 75px;
+  border: 1px solid #ffffff00;
+  border-radius: 0 0 10px 10px;
+  margin-bottom: 15px;
+}
+
+.header__text {
+  width: 50%;
+}
+
+.brigade {
+  text-align: center;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 15px 10px;
+}
+
+.brigade__students {
+  display: flex;
+  justify-content: space-between;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.links__lab {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 150px; 
+  height: 75px;
+  transition: 0.25s all;
+}
+
+.links__lab:hover {
+  transform: scale(1.02);
+  color: #fffefe;
+  background-color: rgb(82, 220, 220);
+  cursor: pointer;
+}
+
+
+.lab {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 40px;
+  width: 100%;
+  margin-top: 15px;
+  padding: 15px;
+}
+
+.lab__description {
+  border: 1px solid #ccc;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.lab__descriptor {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  width: 90%;
+  height: 50px;
+}
+
+.lab__container {
+  border: 1px solid #ccc;
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
