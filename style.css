@@ -46,6 +46,11 @@ a:active {
   justify-content: space-between;
 }
 
+#about {
+  display: flex;
+  justify-content: space-between;
+}
+
 .links {
   display: flex;
   justify-content: space-between;
@@ -95,15 +100,15 @@ a:active {
 }
 
 .lab__subtabs {
+  overflow: overlay;
   border: 1px solid #ccc;
   width: 100%;
   min-height: 50vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-height: 420px;
 }
 
 .lab__descriptor {
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -136,9 +141,75 @@ a:active {
 }
 
 .lab__container {
+  padding: 30px;
   display: none;
 }
 
 .lab__container_active {
   display: block;
+}
+
+.img {
+  width: 100px;
+  height: 100px;
+}
+
+/* bootstrap tab */
+.nav-item {
+  margin: 0 5px;
+}
+/* bootstrap tab */
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+p.dotted {
+  border-style: dotted;
+}
+p.dashed {
+  border-style: dashed;
+}
+p.solid {
+  border-style: solid;
+}
+p.double {
+  border-style: double;
+}
+p.groove {
+  border-style: groove;
+}
+p.ridge {
+  border-style: ridge;
+}
+p.inset {
+  border-style: inset;
+}
+p.outset {
+  border-style: outset;
+}
+p.none {
+  border-style: none;
+}
+p.hidden {
+  border-style: hidden;
+}
+p.mix {
+  border-style: dotted dashed solid double;
+}
+p.blue {
+  border: solid 2px blue;
 }
