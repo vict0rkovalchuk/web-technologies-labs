@@ -68,7 +68,10 @@
       .red_block {
         background-color: red;
         height: 50px;
-        margin: 5px 0;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
       }
       .third {
         display: flex;
@@ -77,8 +80,9 @@
         border: 1px solid #ccc;
         float: left;
         width: 48%;
-        height: 85%;
+        height: 100%;
         margin-right: 13px;
+        position: relative;
       }
       .fourth {
         display: flex;
@@ -88,7 +92,7 @@
         color: white;
         float: left;
         width: 48%;
-        height: 85%;
+        height: 100%;
       }
     </style>
   </head>
@@ -100,8 +104,10 @@
       </header>
       <div class="second">2</div>
       <div class="container">
-        <div class="red_block"></div>
-        <div class="third">3</div>
+        <div class="third">
+          3
+          <div class="red_block"></div>
+        </div>
         <div class="fourth">4</div>
       </div>
       <footer>5</footer>

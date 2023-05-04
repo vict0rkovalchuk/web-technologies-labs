@@ -35,12 +35,13 @@
         margin: 5px;
         border: 1px solid #ccc;
         text-align: center;
+        position: relative;
       }
       .fourth {
         height: 100%; 
         background-color: blue;
         text-align: center;
-        color: #ccc
+        color: #ccc;
       }
       .fifth {
         background-color: bisque;
@@ -51,6 +52,14 @@
         background-color: red;
         height: 50px;
         margin: 5px;
+      }
+
+      .to-bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin: 0;
+        width: 100%;
       }
     </style>
   </head>
@@ -70,7 +79,10 @@
           <td colspan="2" rowspan="1" class="red-block"></td>
         </tr>
         <tr>
-          <td rowspan="3" class="third">3</td>
+          <td rowspan="3" class="third">3
+            <div class="red-block to-bottom">
+            </div>
+          </td>
           <td rowspan="3" class="fourth">4</td>
         </tr>
         <tr></tr>
