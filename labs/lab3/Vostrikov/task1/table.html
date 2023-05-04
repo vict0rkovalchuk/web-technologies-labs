@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table markup</title>
+    <style>
+      table {
+        width: 500px;
+        height: 600px;
+        border-collapse: collapse;
+      }
+      thead {
+        background-color: bisque;
+        height: 40px;
+      }
+      .header-block {
+        border: 1px solid #000000;
+        background-color: #ffffff;
+        margin: 10px; 
+        height: 25px;
+        width: 200px;
+      }
+
+
+      .second {
+        background-color: blue;
+        text-align: center;
+        color: #ccc;
+        width: 25%;
+      }
+
+      .third {
+        margin: 5px;
+        border: 1px solid #ccc;
+        text-align: center;
+      }
+      .fourth {
+        height: 100%; 
+        background-color: blue;
+        text-align: center;
+        color: #ccc
+      }
+      .fifth {
+        background-color: bisque;
+        height: 40px;
+        text-align: center;
+      }
+      .red-block {
+        background-color: red;
+        height: 50px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>
+            <div class="header-block"></div>
+          </th>
+          <th colspan="2">1</th>
+        </th>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="4" class="second">2</td>
+          <td colspan="2" rowspan="1" class="red-block"></td>
+        </tr>
+        <tr>
+          <td rowspan="3" class="third">3</td>
+          <td rowspan="3" class="fourth">4</td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr>
+          <td colspan="3" class="fifth">5</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

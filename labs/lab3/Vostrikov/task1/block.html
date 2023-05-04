@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blocks</title>
+    <style>
+      * {
+        margin: 0 auto;
+        box-sizing: border-box;
+      }
+
+      main {
+        max-width: 600px;
+        max-height: 800px;
+      }
+      .white_block {
+        float: left;
+        background-color: #fff;
+        margin: 10px;
+        border: 1px solid #000;
+        height: 20px;
+        width: 300px;
+        margin-right: 50px;
+      }
+
+      .header_text {
+        width: 100px;
+        text-align: center;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      header,
+      footer {
+        background-color: bisque;
+        height: 50px;
+      }
+
+      footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .second {
+        height: 400px;
+        width: 40%;
+        background-color: blue;
+        float: left;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        width: 60%;
+        height: 400px;
+        padding: 20px;
+        margin-left: 240px;
+        padding: 10px;
+      }
+
+      .red_block {
+        background-color: red;
+        height: 50px;
+        margin: 5px 0;
+      }
+      .third {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #ccc;
+        float: left;
+        width: 48%;
+        height: 85%;
+        margin-right: 13px;
+      }
+      .fourth {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: blue;
+        color: white;
+        float: left;
+        width: 48%;
+        height: 85%;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="white_block"></div>
+        <div class="header_text">1</div>
+      </header>
+      <div class="second">2</div>
+      <div class="container">
+        <div class="red_block"></div>
+        <div class="third">3</div>
+        <div class="fourth">4</div>
+      </div>
+      <footer>5</footer>
+    </main>
+  </body>
+</html>
