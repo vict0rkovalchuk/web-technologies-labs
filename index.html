@@ -633,20 +633,322 @@
       <div class="labs lab3">
         <div class="lab">
           <div class="lab__description">
-            <div class="lab__descriptor lab__descriptor_active">1</div>
-            <div class="lab__descriptor">2</div>
-            <div class="lab__descriptor">3</div>
-            <div class="lab__descriptor">4</div>
-            <div class="lab__descriptor">5</div>
-            <div class="lab__descriptor">6</div>
+            <div class="lab__descriptor lab__descriptor_active">
+              Тема, мета ЛР №3 Місце розташування сайту, звіту
+            </div>
+            <div class="lab__descriptor">Завдання №1</div>
+            <div class="lab__descriptor">Завдання №2</div>
+            <div class="lab__descriptor">Завдання №3</div>
+            <div class="lab__descriptor">Висновки</div>
           </div>
           <div class="lab__subtabs">
-            <div class="lab__container lab__container_active">Контент №1</div>
-            <div class="lab__container">Контент №2</div>
-            <div class="lab__container">Контент №3</div>
-            <div class="lab__container">Контент №4</div>
-            <div class="lab__container">Контент №5</div>
-            <div class="lab__container">Контент №6</div>
+            <div class="lab__container lab__container_active">
+              <h3>Тема:</h3>
+              <p>
+                ВЕРСТКА HTML-ДОКУМЕНТУ. БЛОКОВА ВЕРСТКА. ВЕРСТКА ЗАСОБАМИ CSS та
+                FLEXBOX.
+              </p>
+              <br />
+              <h3>Мета:</h3>
+              <p>
+                ⎯ придбати практичні навички роботи верстки сторінок засобами
+                CSS, верстки на основі плаваючих елементів, з’ясувати переваги
+                та недоліки типів макетів веб- сторінок ⎯ придбати практичні
+                навички роботи верстки сторінок засобами CSS та FLEXBOX
+              </p>
+              <br />
+              <h3>Місце розташування сайту:</h3>
+              <p>GitHub Pages:</p>
+              <br />
+              <h3>Місце розташування звіту:</h3>
+              <p>
+                GitHub Pages:
+                <a
+                  style="color: blue"
+                  target="_blank"
+                  href="https://vict0rkovalchuk.github.io/web-technologies-labs/"
+                  >https://vict0rkovalchuk.github.io/web-technologies-labs/</a
+                >
+              </p>
+            </div>
+            <div class="lab__container">
+              <h3>Зовнішній вигляд макету.</h3>
+              <img
+                src="./labs/lab3/project/screenshots/screen1.png"
+                alt=""
+                style="width: 500px"
+              />
+              <img
+                src="./labs/lab3/project/screenshots/screen2.png"
+                alt=""
+                style="width: 500px"
+              />
+              <h3>
+                <a
+                  href="https://github.com/vict0rkovalchuk/web-technologies-labs/tree/main/labs/lab3/project"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Код макету</a
+                >
+              </h3>
+            </div>
+            <div class="lab__container">
+              <h3>
+                Засобами HTML та CSS виконати Завдання №2, a саме: створити
+                окремі веб- сторінки:
+              </h3>
+              <p>
+                Розмітку за допомогою таблиці (номер варіанта – остання цифра у
+                списку групи) <br />
+                Розмітку за допомогою блоків (плаваючих елементів) (номер
+                варіанта – остання цифра у списку групи + 1)
+              </p>
+              <h3>Виконав: Востріков А.О., Група ІП-04(Варіант 3, 4)</h3>
+              <p>Таблична:</p>
+              <pre>
+&lt;!DOCTYPE html&gt;
+                &lt;html lang=&quot;en&quot;&gt;
+                  &lt;head&gt;
+                    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+                    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+                    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+                    &lt;title&gt;Table markup&lt;/title&gt;
+                    &lt;style&gt;
+                      table {
+                        width: 500px;
+                        height: 600px;
+                        border-collapse: collapse;
+                      }
+                      thead {
+                        background-color: bisque;
+                        height: 40px;
+                      }
+                      .header-block {
+                        border: 1px solid #000000;
+                        background-color: #ffffff;
+                        margin: 10px; 
+                        height: 25px;
+                        width: 200px;
+                      }
+                
+                
+                      .second {
+                        background-color: blue;
+                        text-align: center;
+                        color: #ccc;
+                        width: 25%;
+                      }
+                
+                      .third {
+                        margin: 5px;
+                        border: 1px solid #ccc;
+                        text-align: center;
+                        position: relative;
+                      }
+                      .fourth {
+                        height: 100%; 
+                        background-color: blue;
+                        text-align: center;
+                        color: #ccc;
+                      }
+                      .fifth {
+                        background-color: bisque;
+                        height: 40px;
+                        text-align: center;
+                      }
+                      .red-block {
+                        background-color: red;
+                        height: 50px;
+                        margin: 5px;
+                      }
+                
+                      .to-bottom {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        margin: 0;
+                        width: 100%;
+                      }
+                    &lt;/style&gt;
+                  &lt;/head&gt;
+                  &lt;body&gt;
+                    &lt;table&gt;
+                      &lt;thead&gt;
+                        &lt;tr&gt;
+                          &lt;th&gt;
+                            &lt;div class=&quot;header-block&quot;&gt;&lt;/div&gt;
+                          &lt;/th&gt;
+                          &lt;th colspan=&quot;2&quot;&gt;1&lt;/th&gt;
+                        &lt;/th&gt;
+                      &lt;/thead&gt;
+                      &lt;tbody&gt;
+                        &lt;tr&gt;
+                          &lt;td rowspan=&quot;4&quot; class=&quot;second&quot;&gt;2&lt;/td&gt;
+                          &lt;td colspan=&quot;2&quot; rowspan=&quot;1&quot; class=&quot;red-block&quot;&gt;&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                          &lt;td rowspan=&quot;3&quot; class=&quot;third&quot;&gt;3
+                            &lt;div class=&quot;red-block to-bottom&quot;&gt;
+                            &lt;/div&gt;
+                          &lt;/td&gt;
+                          &lt;td rowspan=&quot;3&quot; class=&quot;fourth&quot;&gt;4&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;&lt;/tr&gt;
+                        &lt;tr&gt;&lt;/tr&gt;
+                        &lt;tr&gt;
+                          &lt;td colspan=&quot;3&quot; class=&quot;fifth&quot;&gt;5&lt;/td&gt;
+                        &lt;/tr&gt;
+                      &lt;/tbody&gt;
+                    &lt;/table&gt;
+                  &lt;/body&gt;
+                &lt;/html&gt;
+                </pre
+              >
+              <p>Блочна:</p>
+              <pre>
+&lt;!DOCTYPE html&gt;
+                &lt;html lang=&quot;en&quot;&gt;
+                  &lt;head&gt;
+                    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+                    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+                    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+                    &lt;title&gt;Blocks&lt;/title&gt;
+                    &lt;style&gt;
+                      * {
+                        margin: 0 auto;
+                        box-sizing: border-box;
+                      }
+                
+                      main {
+                        max-width: 600px;
+                        max-height: 800px;
+                      }
+                      .white_block {
+                        float: left;
+                        background-color: #fff;
+                        margin: 10px;
+                        border: 1px solid #000;
+                        height: 20px;
+                        width: 300px;
+                        margin-right: 50px;
+                      }
+                
+                      .header_text {
+                        width: 100px;
+                        text-align: center;
+                        height: 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                      }
+                
+                      header,
+                      footer {
+                        background-color: bisque;
+                        height: 50px;
+                      }
+                
+                      footer {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                      }
+                
+                      .second {
+                        height: 400px;
+                        width: 40%;
+                        background-color: blue;
+                        float: left;
+                        color: white;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                      }
+                
+                      .container {
+                        width: 60%;
+                        height: 400px;
+                        padding: 20px;
+                        margin-left: 240px;
+                        padding: 10px;
+                      }
+                
+                      .red_block {
+                        background-color: red;
+                        height: 50px;
+                        width: 100%;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                      }
+                      .third {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: 1px solid #ccc;
+                        float: left;
+                        width: 48%;
+                        height: 100%;
+                        margin-right: 13px;
+                        position: relative;
+                      }
+                      .fourth {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: blue;
+                        color: white;
+                        float: left;
+                        width: 48%;
+                        height: 100%;
+                      }
+                    &lt;/style&gt;
+                  &lt;/head&gt;
+                  &lt;body&gt;
+                    &lt;main&gt;
+                      &lt;header&gt;
+                        &lt;div class=&quot;white_block&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;header_text&quot;&gt;1&lt;/div&gt;
+                      &lt;/header&gt;
+                      &lt;div class=&quot;second&quot;&gt;2&lt;/div&gt;
+                      &lt;div class=&quot;container&quot;&gt;
+                        &lt;div class=&quot;third&quot;&gt;
+                          3
+                          &lt;div class=&quot;red_block&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;fourth&quot;&gt;4&lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;footer&gt;5&lt;/footer&gt;
+                    &lt;/main&gt;
+                  &lt;/body&gt;
+                &lt;/html&gt;
+                </pre
+              >
+            </div>
+            <div class="lab__container">
+              <h3>
+                Кожному студенту виконати свій номер варіанта Завдання №3, за
+                технологією FLEXBOX та засобами CSS.
+              </h3>
+              <p>Востріков Андрій, ІП-04, 3 варіант:</p>
+              <a
+                href="https://github.com/vict0rkovalchuk/web-technologies-labs/tree/main/labs/lab3/Vostrikov/task2"
+                >Код виконаного завдання</a
+              >
+            </div>
+            <div class="lab__container">
+              <h3>Висновки</h3>
+              <p>
+                Виконавши лабораторну роботу №3, отримали навички верстки HTML
+                документа засобами таблиць, блоками(технологія float) та
+                flexbox. Верстка за допомогою таблиць та float є застарілим та
+                незручним підходом, які вже довгий час не використовуються на
+                практиці. Технологія flexbox, натомість, дає можливість швидко
+                та без зайвих зусиль здійснювати блочну верстку, центрувати
+                блоки тощо. Також іноді використовується ще більш нова технлогія
+                grid - для створення "сіточної" структури сайту
+              </p>
+            </div>
           </div>
         </div>
       </div>
