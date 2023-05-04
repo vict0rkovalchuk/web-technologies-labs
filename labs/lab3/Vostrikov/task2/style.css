@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@900&display=swap');
+
+* {
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: 'M PLUS 1p', sans-serif;
+}
+
+body {
+  font-size: 20px;
+}
+
+.courses {
+  background-color: #292929;
+  width: 100%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.courses__text {
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-weight: 900;
+}
+
+.courses__text_big {
+  color: 
+  #ff9638;
+  font-size: 2rem;
+}
+.courses__items {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.courses__item {
+  width: 30%;
+}
+
+@media screen and (max-width: 900px) {
+  .courses__item {
+    width: 80%;
+    margin-top: 20px; 
+  }
+}
+
+.courses__description {
+  border: 1px solid #474747;
+  border-radius: 10px 10px 0 0;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 10px;
+}
+
+.courses__button {
+  border: 1px solid #474747;
+  border-radius: 0 0 10px 10px;
+  height: 10%;
+  width: 100%;
+  background: none;
+  text-decoration: none;
+  text-transform: none;
+  display: block;
+  color: #ccc;
+  text-align: center;
+}
+
+.courses__pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+
+.courses__description, .courses__button {
+  transition: all 0.25s ease-in;
+  cursor: pointer;
+}
+
+.courses__description:hover, .courses__button:hover {
+  border-color: #ff9638;
+}
+
+.courses__difficulty {
+  color: #2d7abe;
+  font-weight: 900;
+  margin-top: 5px;
+  font-size: 1rem;
+}
+
+.courses__name {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+}
+
+.courses__desc {
+  color: #ff9638;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.courses__text {
+  text-transform: none;
+}
+
+.courses__left-places {
+  font-weight: 900;
+  font-size: 1rem;
+  color: #2d7abe;
+  margin-top: 20px;
+}
+
+.pics {
+  margin-top: 20px;
+  background-color: #2d7abe;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.pics__picture {
+  border-radius: 10px;
+  height: 20vh;
+}
+
+@media screen and (max-width: 900px) and (max-width: 1200px) {
+  .pics__picture {
+    width: 80%;
+    margin-top: 20px; 
+  }
+}
+
+.description {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1rem;
+}
+
+.description__header {
+  margin-left: -100px;
+  color: #ff9638;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.description__quote {
+  position: relative;
+  padding: 2rem;
+  font-weight: lighter;
+  width: 75%;
+}
+
+.description__quote::after, .description__quote:before,
+blockquote::after, blockquote:before{
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border:2px solid transparent;
+}
+
+.description__quote::before { /* top left */
+  top:10px;
+  left:10px;
+  border-top-color: #2d7abe;
+  border-left-color:#2d7abe;
+  border-width: 0.2rem;
+  border-radius: 4px;
+}
+
+blockquote::after { /* bottom right */
+  bottom:10px;
+  right:10px;
+  border-bottom-color: #ff9638;
+  border-right-color:#ff9638;
+  border-width: 0.2rem;
+  border-radius: 4px;
+}
+
+.footer {
+  height: 100px; 
+  background-color: #ff9638;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+}
+
+.footer__study {
+  position: relative;
+  padding: 1.5rem;
+  font-weight: lighter;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.footer__study::after, .footer__study:before,
+.footer__quote::after, .footer__quote:before{
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border:2px solid transparent;
+}
+
+.footer__study::before { /* top left */
+  top:10px;
+  left:10px;
+  border-top-color: #2d7abe;
+  border-left-color:#2d7abe;
+  border-width: 0.2rem;
+  border-radius: 4px;
+}
+
+.footer__quote::after { /* bottom right */
+  bottom:10px;
+  right:10px;
+  border-bottom-color: #2d7abe;
+  border-right-color:#2d7abe;
+  border-width: 0.2rem;
+  border-radius: 4px;
+}
+
+.footer__credit {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+
+.footer__check {
+  width: 75px;
+  height: 75px;
+  margin-right: 1rem;
+}
