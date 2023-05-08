@@ -955,20 +955,307 @@
       <div class="labs lab4">
         <div class="lab">
           <div class="lab__description">
-            <div class="lab__descriptor lab__descriptor_active">1</div>
-            <div class="lab__descriptor">2</div>
-            <div class="lab__descriptor">3</div>
-            <div class="lab__descriptor">4</div>
-            <div class="lab__descriptor">5</div>
-            <div class="lab__descriptor">6</div>
+            <div class="lab__descriptor lab__descriptor_active">
+              ПОСТАНОВКА ЗАДАЧІ Лабораторної роботи №4
+            </div>
+            <div class="lab__descriptor">
+              Способи функціонального застосування Javascript
+            </div>
+            <div class="lab__descriptor">МАСИВИ(Пункт 4)</div>
+            <div class="lab__descriptor">Пункт 6</div>
+            <div class="lab__descriptor">Висновки</div>
           </div>
           <div class="lab__subtabs">
-            <div class="lab__container lab__container_active">Контент №1</div>
+            <div class="lab__container lab__container_active">
+              <h3>Тема:</h3>
+              <p>
+                ФУНКЦІОНАЛЬНЕ ЗАСТОСУВАННЯ JAVASCRIPT У HTML-ДОКУМЕНТІ.
+                ВИКОРИСТАННЯ МАСИВІВ У JS-СЦЕНАРІЯХ. РЕАЛІЗАЦІЯ ПРОГРАМ ЗАСОВАМИ
+                МОВИ JAVASCRIPT
+              </p>
+              <br />
+              <h3>Мета:</h3>
+              <p>
+                придбати практичні навички роботи з масивами у js-сценаріях.
+                Реалізація програм засовами мови JAVASCRIPT
+              </p>
+              <br />
+              <h3>Місце розташування сайту:</h3>
+              <p>GitHub Pages:</p>
+              <br />
+              <h3>Місце розташування звіту:</h3>
+              <p>
+                GitHub Pages:
+                <a
+                  style="color: blue"
+                  target="_blank"
+                  href="https://vict0rkovalchuk.github.io/web-technologies-labs/"
+                  >https://vict0rkovalchuk.github.io/web-technologies-labs/</a
+                >
+              </p>
+            </div>
             <div class="lab__container">Контент №2</div>
-            <div class="lab__container">Контент №3</div>
-            <div class="lab__container">Контент №4</div>
-            <div class="lab__container">Контент №5</div>
-            <div class="lab__container">Контент №6</div>
+            <div class="lab__container">
+              <h3>МАСИВИ(Пункт 4)</h3>
+              <p>
+                Використовуючи сценарій на JavaScript, виконати завдання. яке
+                приведене у Таблиці №1. Кожному студенту виконати своє завдання.
+                Номер варіанта відповідає останній цифрі студента у списку
+                групи. Наприклад, Студент 18 за списком – буде виконувати 8
+                варіант
+              </p>
+              <p>Востріков Андрій, ІП-04, варіант 3:</p>
+              <ol>
+                <li>
+                  Заданий одновимірний масив А, кількість елементів якого задана
+                  користувачем. Побудувати масив В, кожний елемент якого
+                  обчислюється за формулою : bі = max*ai де - max це
+                  максимальний елемент масиву А. Надрукувати вхідний та вихідний
+                  масиви.
+                </li>
+                <li>
+                  Виконати сортування вихідного масиву за зменшенням методом
+                  вставки
+                </li>
+              </ol>
+              <p>Код:</p>
+              <pre>
+use strict';
+
+                let n;
+                
+                try {
+                  n = +prompt('Input N');
+                } catch (e) {
+                  console.log(e);
+                }
+                
+                const createArray = (n) =&gt;
+                  [...new Array(n)].map(() =&gt; Math.round(Math.random() * 101));
+                
+                const insertSort = (array) =&gt; {
+                  const result = [...array];
+                  for (let i = 1; i &lt; result.length; i++) {
+                    let j = i - 1;
+                    let temp = result[i];
+                    while (j &gt;= 0 &amp;&amp; result[j] &lt; temp) {
+                      result[j + 1] = result[j];
+                      j--;
+                    }
+                    result[j + 1] = temp;
+                  }
+                  return result;
+                };
+                
+                const aArray = createArray(n);
+                const aMax = Math.max(...aArray);
+                const bArray = aArray.map((item) =&gt; item * aMax);
+                
+                const result = insertSort(bArray);
+                
+                console.log('result: ', result, 'a: ', aArray, 'b: ', bArray);</pre
+              >
+              <p>Результати виконання:</p>
+              <img
+                src="./labs/lab4/Vostrikov/task1/screenshots/screen1.png"
+                alt=""
+              />
+              <img
+                src="./labs/lab4/Vostrikov/task1/screenshots/screen2.png"
+                alt=""
+              />
+            </div>
+            <div class="lab__container">
+              <h3>Пункт 6</h3>
+              <p>
+                Забезпечити виконання завдання згідно з варіантом (Таблиця №2),
+                сформувати необхідні дані, вбудовані у програму, виконати
+                тестування програми.
+              </p>
+              <p>Востріков Андрій, ІП-04, варіант 3:</p>
+              <p>
+                Реалізувати калькулятор мовою JavaScript. Обов‘язкові операції:
+                +,-,*,/,%, корінь квадратний, x^y. Кнопки з цифрами та знаками
+                операцій мають бути доступні у інтерфейсі вікна.
+              </p>
+              <p>Код HTML:</p>
+              <pre>
+&lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                  &lt;head&gt;
+                    &lt;title&gt;Calculator&lt;/title&gt;
+                    &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; /&gt;
+                  &lt;/head&gt;
+                  &lt;body&gt;
+                    &lt;div class=&quot;calculator&quot;&gt;
+                      &lt;div class=&quot;display&quot;&gt;&lt;/div&gt;
+                      &lt;button class=&quot;clear-btn&quot;&gt;C&lt;/button&gt;
+                      &lt;button class=&quot;op-btn&quot;&gt;+&lt;/button&gt;
+                      &lt;button class=&quot;op-btn&quot;&gt;-&lt;/button&gt;
+                      &lt;button class=&quot;op-btn&quot;&gt;*&lt;/button&gt;
+                      &lt;button class=&quot;op-btn&quot;&gt;/&lt;/button&gt;
+                      &lt;button class=&quot;op-btn&quot;&gt;%&lt;/button&gt;
+                      &lt;button class=&quot;op-btn&quot;&gt;^&lt;/button&gt;
+                      &lt;button class=&quot;op-btn&quot;&gt;sqrt&lt;/button&gt;
+                      &lt;button class=&quot;num-btn&quot;&gt;1&lt;/button&gt;
+                      &lt;button class=&quot;num-btn&quot;&gt;2&lt;/button&gt;
+                      &lt;button class=&quot;num-btn&quot;&gt;3&lt;/button&gt;
+                      &lt;button class=&quot;num-btn&quot;&gt;4&lt;/button&gt;
+                      &lt;button class=&quot;num-btn&quot;&gt;5&lt;/button&gt;
+                      &lt;button class=&quot;num-btn&quot;&gt;6&lt;/button&gt;
+                      &lt;button class=&quot;num-btn&quot;&gt;7&lt;/button&gt;
+                      &lt;button class=&quot;num-btn&quot;&gt;8&lt;/button&gt;
+                      &lt;button class=&quot;num-btn&quot;&gt;9&lt;/button&gt;
+                      &lt;button class=&quot;num-btn&quot;&gt;0&lt;/button&gt;
+                      &lt;button class=&quot;dec-btn&quot;&gt;.&lt;/button&gt;
+                      &lt;button class=&quot;eq-btn&quot;&gt;=&lt;/button&gt;
+                    &lt;/div&gt;
+                    &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+                  &lt;/body&gt;
+                &lt;/html&gt;</pre
+              >
+              <p>Код CSS:</p>
+              <pre>
+.calculator {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(6, 1fr);
+                width: 250px;
+                margin: auto;
+                text-align: center;
+              }
+              
+              .display {
+                grid-column: 1 / span 4;
+                background-color: #fff;
+                font-size: 20px;
+                padding: 5px;
+                text-align: right;
+              }
+              
+              button {
+                background-color: #eee;
+                border: none;
+                font-size: 20px;
+                padding: 10px;
+                cursor: pointer;
+              }
+              
+              button:hover {
+                background-color: #ddd;
+              }
+              </pre>
+              <p>Код JS:</p>
+              <pre>
+let display = document.querySelector('.display');
+                let currentNum = '0';
+                let storedNum = null;
+                let operation = null;
+                let decimalPressed = false;
+                
+                function addToDisplay(num) {
+                  if (num === '.' &amp;&amp; decimalPressed) return;
+                  if (currentNum === '0') {
+                    currentNum = num;
+                  } else {
+                    currentNum += num;
+                  }
+                  display.textContent = currentNum;
+                  if (num === '.') {
+                    decimalPressed = true;
+                  }
+                }
+                
+                function clearDisplay() {
+                  currentNum = '0';
+                  storedNum = null;
+                  operation = null;
+                  decimalPressed = false;
+                  display.textContent = currentNum;
+                }
+                
+                function doOperation(op) {
+                  storedNum = currentNum;
+                  currentNum = '0';
+                  operation = op;
+                  decimalPressed = false;
+                }
+                
+                function calculate() {
+                  if (operation === '+') {
+                    currentNum = String(parseFloat(storedNum) + parseFloat(currentNum));
+                  } else if (operation === '-') {
+                    currentNum = String(parseFloat(storedNum) - parseFloat(currentNum));
+                  } else if (operation === '*') {
+                    currentNum = String(parseFloat(storedNum) * parseFloat(currentNum));
+                  } else if (operation === '/') {
+                    currentNum = String(parseFloat(storedNum) / parseFloat(currentNum));
+                  } else if (operation === '%') {
+                    currentNum = String(parseFloat(storedNum) % parseFloat(currentNum));
+                  } else if (operation === 'sqrt') {
+                    currentNum = String(Math.sqrt(parseFloat(currentNum)));
+                  } else if (operation === '^') {
+                    currentNum = String(
+                      Math.pow(parseFloat(storedNum), parseFloat(currentNum))
+                    );
+                  }
+                  display.textContent = currentNum;
+                  storedNum = null;
+                  operation = null;
+                  decimalPressed = false;
+                }
+                
+                document.querySelectorAll('.num-btn').forEach((button) =&gt; {
+                  button.addEventListener('click', () =&gt; {
+                    addToDisplay(button.textContent);
+                  });
+                });
+                
+                document.querySelector('.dec-btn').addEventListener('click', () =&gt; {
+                  addToDisplay('.');
+                });
+                
+                document.querySelector('.clear-btn').addEventListener('click', () =&gt; {
+                  clearDisplay();
+                });
+                
+                document.querySelectorAll('.op-btn').forEach((button) =&gt; {
+                  button.addEventListener('click', () =&gt; {
+                    doOperation(button.textContent);
+                  });
+                });
+                
+                document.querySelector('.eq-btn').addEventListener('click', () =&gt; {
+                  calculate();
+                });</pre
+              >
+              <p>Результат виконання:</p>
+              <img
+                src="./labs/lab4/Vostrikov/task2/screenshots/screen1.png"
+                alt=""
+                srcset=""
+              />
+              <img
+                src="./labs/lab4/Vostrikov/task2/screenshots/screen2.png"
+                alt=""
+                srcset=""
+              /><img
+                src="./labs/lab4/Vostrikov/task2/screenshots/screen3.png"
+                alt=""
+                srcset=""
+              /><img
+                src="./labs/lab4/Vostrikov/task2/screenshots/screen4.png"
+                alt=""
+                srcset=""
+              />
+            </div>
+            <div class="lab__container">
+              Виконавши лабораторну роботу №4, здобули навички робити з
+              використання роботи Javascript в html-документах, навички роботи з
+              масивами, івентами. Під час виконання виконали надані завдання,
+              покращивши навички з написання алгоритмів сортування, роботи з
+              DOM-деревом, числовими операціями в мові Javascript.
+            </div>
           </div>
         </div>
       </div>
