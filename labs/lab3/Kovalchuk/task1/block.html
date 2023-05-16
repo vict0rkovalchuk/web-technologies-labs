@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blocks</title>
+    <style>
+      .container {
+        box-sizing: border-box;
+        border: 1px solid black;
+        padding: 0 40px;
+        width: 500px;
+        height: 600px;
+      }
+
+      .block {
+        border: 1px solid black;
+        text-align: center;
+      }
+
+      .first,
+      .third,
+      .fifth {
+        height: 60px;
+      }
+
+      .first,
+      .third {
+        color: white;
+        background-color: blue;
+      }
+
+      .second,
+      .fifth {
+        background-color: yellow;
+      }
+
+      .second {
+        width: 60px;
+        height: calc(600px - 60px - 60px - 7px);
+      }
+
+      .fourth {
+        width: calc(500px - 60px - 80px - 5px);
+        height: calc(600px - 60px - 60px - 60px - 8px);
+        background-color: white;
+      }
+
+      .float {
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="block first">1</div>
+      <div class="float">
+        <div class="block fifth">5</div>
+        <div class="block fourth">4</div>
+      </div>
+      <div class="block second">2</div>
+      <div class="block third">3</div>
+    </div>
+  </body>
+</html>

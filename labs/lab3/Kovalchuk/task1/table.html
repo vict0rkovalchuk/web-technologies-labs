@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table markup</title>
+    <style>
+      table {
+        width: 500px;
+        height: 600px;
+        border-collapse: collapse;
+      }
+
+      td {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <table border="2">
+      <tr>
+        <td rowspan="4" style="width: 40px"></td>
+        <td
+          colspan="2"
+          style="background-color: blue; color: white; height: 60px"
+        >
+          1
+        </td>
+        <td rowspan="4" style="width: 40px"></td>
+      </tr>
+      <tr>
+        <td rowspan="2" style="background-color: yellow; width: 60px">2</td>
+        <td style="background-color: yellow; height: 60px">5</td>
+      </tr>
+      <tr>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td
+          colspan="2"
+          style="background-color: blue; color: white; height: 60px"
+        >
+          3
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
