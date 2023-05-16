@@ -950,6 +950,59 @@
                   >Link</a
                 >
               </p>
+              <pre>
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang=&quot;en&quot;&gt;
+                  &lt;head&gt;
+                    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+                    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+                    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+                    &lt;title&gt;Table markup&lt;/title&gt;
+                    &lt;style&gt;
+                      table {
+                        width: 500px;
+                        height: 600px;
+                        border-collapse: collapse;
+                      }
+                
+                      td {
+                        text-align: center;
+                      }
+                    &lt;/style&gt;
+                  &lt;/head&gt;
+                  &lt;body&gt;
+                    &lt;table border=&quot;2&quot;&gt;
+                      &lt;tr&gt;
+                        &lt;td rowspan=&quot;4&quot; style=&quot;width: 40px&quot;&gt;&lt;/td&gt;
+                        &lt;td
+                          colspan=&quot;2&quot;
+                          style=&quot;background-color: blue; color: white; height: 60px&quot;
+                        &gt;
+                          1
+                        &lt;/td&gt;
+                        &lt;td rowspan=&quot;4&quot; style=&quot;width: 40px&quot;&gt;&lt;/td&gt;
+                      &lt;/tr&gt;
+                      &lt;tr&gt;
+                        &lt;td rowspan=&quot;2&quot; style=&quot;background-color: yellow; width: 60px&quot;&gt;2&lt;/td&gt;
+                        &lt;td style=&quot;background-color: yellow; height: 60px&quot;&gt;5&lt;/td&gt;
+                      &lt;/tr&gt;
+                      &lt;tr&gt;
+                        &lt;td&gt;4&lt;/td&gt;
+                      &lt;/tr&gt;
+                      &lt;tr&gt;
+                        &lt;td
+                          colspan=&quot;2&quot;
+                          style=&quot;background-color: blue; color: white; height: 60px&quot;
+                        &gt;
+                          3
+                        &lt;/td&gt;
+                      &lt;/tr&gt;
+                    &lt;/table&gt;
+                  &lt;/body&gt;
+                &lt;/html&gt;
+                
+                                </pre
+              >
 
               <p>
                 Блочна:
@@ -960,6 +1013,76 @@
                   >Link</a
                 >
               </p>
+              <pre>
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang=&quot;en&quot;&gt;
+                  &lt;head&gt;
+                    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+                    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+                    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+                    &lt;title&gt;Blocks&lt;/title&gt;
+                    &lt;style&gt;
+                      .container {
+                        box-sizing: border-box;
+                        border: 1px solid black;
+                        padding: 0 40px;
+                        width: 500px;
+                        height: 600px;
+                      }
+                
+                      .block {
+                        border: 1px solid black;
+                        text-align: center;
+                      }
+                
+                      .first,
+                      .third,
+                      .fifth {
+                        height: 60px;
+                      }
+                
+                      .first,
+                      .third {
+                        color: white;
+                        background-color: blue;
+                      }
+                
+                      .second,
+                      .fifth {
+                        background-color: yellow;
+                      }
+                
+                      .second {
+                        width: 60px;
+                        height: calc(600px - 60px - 60px - 7px);
+                      }
+                
+                      .fourth {
+                        width: calc(500px - 60px - 80px - 5px);
+                        height: calc(600px - 60px - 60px - 60px - 8px);
+                        background-color: white;
+                      }
+                
+                      .float {
+                        float: right;
+                      }
+                    &lt;/style&gt;
+                  &lt;/head&gt;
+                  &lt;body&gt;
+                    &lt;div class=&quot;container&quot;&gt;
+                      &lt;div class=&quot;block first&quot;&gt;1&lt;/div&gt;
+                      &lt;div class=&quot;float&quot;&gt;
+                        &lt;div class=&quot;block fifth&quot;&gt;5&lt;/div&gt;
+                        &lt;div class=&quot;block fourth&quot;&gt;4&lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;block second&quot;&gt;2&lt;/div&gt;
+                      &lt;div class=&quot;block third&quot;&gt;3&lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/body&gt;
+                &lt;/html&gt;
+                
+                                </pre
+              >
             </div>
             <div class="lab__container">
               <h3>
