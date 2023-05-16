@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Orbitron"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="table">
+      <div class="cell">
+        <h1 id="clock" class="clock"></h1>
+
+        <select id="hours"></select>
+        <select id="minutes"></select>
+        <select id="seconds"></select>
+        <select id="ampm">
+          <option value="AM">AM</option>
+          <option value="PM">PM</option>
+        </select>
+
+        <p>
+          <button id="snooze" class="hide">Snooze</button>
+          <button id="startstop">Set Alarm</button>
+        </p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

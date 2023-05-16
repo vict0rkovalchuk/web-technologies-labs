@@ -1106,6 +1106,12 @@ use strict';
                 
                 console.log('result: ', result, 'a: ', aArray, 'b: ', bArray);</pre
               >
+              <a
+                href="./labs/lab4/Vostrikov/task1/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Demo</a
+              >
               <p>Результати виконання:</p>
               <img
                 src="./labs/lab4/Vostrikov/task1/screenshots/screen1.png"
@@ -1113,6 +1119,87 @@ use strict';
               />
               <img
                 src="./labs/lab4/Vostrikov/task1/screenshots/screen2.png"
+                alt=""
+              />
+              <br /><br />
+              <p>Ковальчук Віктор, ІП-05, варіант 8:</p>
+              <ol>
+                <li>
+                  Створити два одновимірних масивів, кількість елементів яких
+                  задана користувачем. Знайти найменший серед тих елементів
+                  першого вектора, які співпадають із значеннями елементів
+                  другого вектора.
+                </li>
+                <li>
+                  Упорядкувати масив у порядку зростання методом бульбашки.
+                  Надрукувати вхідний та вихідний масив.
+                </li>
+              </ol>
+              <p>Код:</p>
+              <pre>
+                'use strict';
+
+                let n1 = prompt('N1');
+                let n2 = prompt('N2');
+                
+                const createArr = num => {
+                  let arr = [];
+                  for (let i = 0; i < num; i++) {
+                    arr.push(Math.floor(Math.random() * (20 - 1 + 1) + 1));
+                  }
+                  return arr;
+                };
+                
+                let one = createArr(n1);
+                let two = createArr(n2);
+                
+                console.log('Input array', one);
+                console.log(two);
+                
+                function bubbleSort(arr) {
+                  for (var i = 0, endI = arr.length - 1; i < endI; i++) {
+                    for (var j = 0, endJ = endI - i; j < endJ; j++) {
+                      if (arr[j] > arr[j + 1]) {
+                        var swap = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = swap;
+                      }
+                    }
+                  }
+                  return arr;
+                }
+                
+                const sortedArr = bubbleSort(one);
+                console.log('Output array', sortedArr);
+                
+                function consoleTheLeastNumber(arr1, arr2) {
+                  let n = 0;
+                  for (let i = 0; i < arr1.length; i++) {
+                    if (arr2.includes(arr1[i])) {
+                      n = arr1[i];
+                      break;
+                    }
+                  }
+                  n === 0 ? console.log('No number') : console.log('The least number', n);
+                }
+                
+                consoleTheLeastNumber(sortedArr, two);
+                </pre
+              >
+
+              <a
+                href="./labs/lab4/Kovalchuk/task1/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Demo</a
+              >
+              <p>Результати виконання:</p>
+              <img
+                src="./labs/lab4/Kovalchuk/task1/screenshots/screen1.jpg"
+                alt=""
+              />
+              <img
+                src="./labs/lab4/Kovalchuk/task1/screenshots/screen2.jpg"
                 alt=""
               />
             </div>
@@ -1123,6 +1210,7 @@ use strict';
                 сформувати необхідні дані, вбудовані у програму, виконати
                 тестування програми.
               </p>
+
               <p>Востріков Андрій, ІП-04, варіант 3:</p>
               <p>
                 Реалізувати калькулятор мовою JavaScript. Обов‘язкові операції:
@@ -1280,6 +1368,12 @@ let display = document.querySelector('.display');
                   calculate();
                 });</pre
               >
+              <a
+                href="./labs/lab4/Vostrikov/task2/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Demo</a
+              >
               <p>Результат виконання:</p>
               <img
                 src="./labs/lab4/Vostrikov/task2/screenshots/screen1.png"
@@ -1296,6 +1390,213 @@ let display = document.querySelector('.display');
                 srcset=""
               /><img
                 src="./labs/lab4/Vostrikov/task2/screenshots/screen4.png"
+                alt=""
+                srcset=""
+              />
+              <br /><br />
+              <p>Ковальчук Віктор, ІП-05, варіант 8:</p>
+              <p>
+                Реалізувати програму-будильник. Основні функції:
+                увімкнення-вимкнення, уведення дати та часу. При досягненні часу
+                спрацьовування, заданого для будильника, видавати повідомлення.
+              </p>
+              <p>Код HTML:</p>
+              <pre>
+                &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                  &lt;head&gt;
+                    &lt;title&gt;Calculator&lt;/title&gt;
+                    &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; /&gt;
+                    &lt;link
+                      href=&quot;https://fonts.googleapis.com/css?family=Orbitron&quot;
+                      rel=&quot;stylesheet&quot;
+                    /&gt;
+                  &lt;/head&gt;
+                  &lt;body&gt;
+                    &lt;div class=&quot;table&quot;&gt;
+                      &lt;div class=&quot;cell&quot;&gt;
+                        &lt;h1 id=&quot;clock&quot; class=&quot;clock&quot;&gt;&lt;/h1&gt;
+                
+                        &lt;select id=&quot;hours&quot;&gt;&lt;/select&gt;
+                        &lt;select id=&quot;minutes&quot;&gt;&lt;/select&gt;
+                        &lt;select id=&quot;seconds&quot;&gt;&lt;/select&gt;
+                        &lt;select id=&quot;ampm&quot;&gt;
+                          &lt;option value=&quot;AM&quot;&gt;AM&lt;/option&gt;
+                          &lt;option value=&quot;PM&quot;&gt;PM&lt;/option&gt;
+                        &lt;/select&gt;
+                
+                        &lt;p&gt;
+                          &lt;button id=&quot;snooze&quot; class=&quot;hide&quot;&gt;Snooze&lt;/button&gt;
+                          &lt;button id=&quot;startstop&quot;&gt;Set Alarm&lt;/button&gt;
+                        &lt;/p&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+                  &lt;/body&gt;
+                &lt;/html&gt;
+                
+                </pre
+              >
+              <p>Код CSS:</p>
+              <pre>
+                body {
+                  background: #333;
+                  text-align: center;
+                }
+                
+                h1 {
+                  font-family: 'Orbitron', sans-serif;
+                  font-size: 4em;
+                  color: #fff;
+                }
+                
+                button {
+                  cursor: pointer;
+                  margin: 0 5px;
+                  padding: 10px 30px;
+                  background: transparent;
+                  border: 1px solid #ccc;
+                  border-radius: 8px;
+                  outline: 0;
+                  color: #fff;
+                  transition: all ease 300ms;
+                }
+                button:hover {
+                  color: #333;
+                  background: #fff;
+                }
+                
+                .table {
+                  display: table;
+                  width: 100%;
+                  height: 100%;
+                }
+                .cell {
+                  display: table-cell;
+                  vertical-align: middle;
+                  cursor: default;
+                }
+                
+                .hide {
+                  display: none;
+                }
+                
+              </pre>
+              <p>Код JS:</p>
+              <pre>
+                let time,
+                alarm,
+                currentH,
+                currentM,
+                activeAlarm = false,
+                sound = new Audio(
+                  'http://soundbible.com/mp3/Rooster-SoundBible.com-1114473528.mp3'
+                );
+              
+              sound.loop = true;
+              
+              function displayTime() {
+                let now = new Date();
+                time = now.toLocaleTimeString();
+                clock.textContent = time;
+                if (time === alarm) {
+                  sound.play();
+              
+                  snooze.className = '';
+                }
+                setTimeout(displayTime, 1000);
+              }
+              displayTime();
+              
+              function addMinSecVals(id) {
+                let select = id;
+                let min = 59;
+              
+                for (i = 0; i <= min; i++) {
+                  select.options[select.options.length] = new Option(
+                    i < 10 ? '0' + i : i,
+                    i < 10 ? '0' + i : i
+                  );
+                }
+              }
+              function addHours(id) {
+                let select = id;
+                let hour = 12;
+              
+                for (i = 1; i <= hour; i++) {
+                  select.options[select.options.length] = new Option(i < 10 ? '0' + i : i, i);
+                }
+              }
+              addMinSecVals(minutes);
+              addMinSecVals(seconds);
+              addHours(hours);
+              
+              startstop.onclick = function () {
+                if (activeAlarm === false) {
+                  hours.disabled = true;
+                  minutes.disabled = true;
+                  seconds.disabled = true;
+                  ampm.disabled = true;
+              
+                  alarm =
+                    hours.value +
+                    ':' +
+                    minutes.value +
+                    ':' +
+                    seconds.value +
+                    ' ' +
+                    ampm.value;
+                  this.textContent = 'Clear Alarm';
+                  activeAlarm = true;
+                } else {
+                  hours.disabled = false;
+                  minutes.disabled = false;
+                  seconds.disabled = false;
+                  ampm.disabled = false;
+              
+                  sound.pause();
+                  alarm = '00:00:00 AM';
+                  this.textContent = 'Set Alarm';
+              
+                  snooze.className = 'hide';
+                  activeAlarm = false;
+                }
+              };
+              
+              snooze.onclick = function () {
+                if (activeAlarm === true) {
+                  currentH = time.substr(0, time.length - 9);
+                  currentM = time.substr(currentH.length + 1, time.length - 8);
+              
+                  if (currentM >= '55') {
+                    minutes.value = '00';
+                    hours.value = parseInt(currentH) + 1;
+                  } else {
+                    if (parseInt(currentM) + 5 <= 9) {
+                      minutes.value = '0' + parseInt(currentM + 5);
+                    } else {
+                      minutes.value = parseInt(currentM) + 5;
+                    }
+                  }
+              
+                  snooze.className = 'hide';
+              
+                  startstop.click();
+                  startstop.click();
+                } else {
+                  return false;
+                }
+              };
+              </pre>
+              <a
+                href="./labs/lab4/Kovalchuk/task2/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Demo</a
+              >
+              <p>Результат виконання:</p>
+              <img
+                src="./labs/lab4/Kovalchuk/task2/screenshots/screen1.jpg"
                 alt=""
                 srcset=""
               />
